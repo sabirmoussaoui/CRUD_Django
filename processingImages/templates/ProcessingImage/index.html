@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<form action="{% url 'getProcessingImage' %}"  method="post" enctype="multipart/form-data" autocomplete="off">
+    {% csrf_token %}
+
+    <div class="col-md-4">
+    <input id = "myfile" type="file" name="myfile" />
+    </div>
+    <div class="row">
+
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i>
+                Submit</button>
+        </div>
+
+    </div>
+</form>
+{% endblock content %}

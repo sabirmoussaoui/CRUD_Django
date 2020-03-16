@@ -1,0 +1,17 @@
+ python manage.py startapp polls employee_register
+
+py manage.py makemigrations employee_register => init
+py manage.py sqlmigrate employee_register 0001 =>  sql stricture
+py manage.py migrate =>execution
+py manage.py migrate my_app zero => ROLLBACK
+-----------------------------------------
+pip install django-crispy-forms
+INSTALLED_APPS = [
+    ...
+
+    'crispy_forms',
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+----------------------------------------
+python manage.py shell
